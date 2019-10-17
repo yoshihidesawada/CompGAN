@@ -6,8 +6,8 @@ Sample code of GAN for Inorganic Chemical Compositions
 - tensorflow 1.10.0
 - pandas 0.20.3
 - numpy 1.14.2
-- xenonpy 
-- pymatgen 
+- xenonpy 0.3.2
+- pymatgen 2018.4.6
 
 # Usage
 Before executing this code, please make ./inputs/training.csv. Then, please execute following command.
