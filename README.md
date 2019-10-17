@@ -16,6 +16,8 @@ Before executing this code, please make ./inputs/training.csv. Then, please exec
 
 After finishing, models and generated compositions are saved in ./outputs. In ./tmp, atom list, normalization parameters, and training data with physic descriptors are saved.
 
+# Citation
+ 
 # Copyright
 Copyright (c) 2019 Yoshihide Sawada
 Released under the MIT license
