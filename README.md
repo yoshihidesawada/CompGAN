@@ -1,5 +1,5 @@
-# CompGAN
-Sample code of GAN for Inorganic Chemical Compositions
+# GAN for generating chemical compositions
+Sample code of CondGAN for Inorganic Chemical Compositions
 
 # Dependencies
 - Python 3.6.3::Anaconda Custom (64-bit)
