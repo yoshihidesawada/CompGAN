@@ -11,7 +11,7 @@ Sample code of GAN for Inorganic Chemical Compositions
 
 # Usage
 Before executing this code, please make ./inputs/training.csv. Then, please execute following command.
-$ python main.py
+'$ python main.py'
 After finishing, models and generated compositions are saved in ./outputs. In ./tmp, atom list, normalization parameters, and training data with physic descriptors are saved.
 
 # Copyright
