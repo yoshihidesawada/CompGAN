@@ -50,6 +50,7 @@ def save(normalized_data, gen, dis, pred, rf):
 
     # convert composition vector to chemical composition
     generated_compositions = []
+    flags = []
     for i in range(len(boa_vectors)):
 
         valences = []
@@ -60,7 +61,7 @@ def save(normalized_data, gen, dis, pred, rf):
                     valence.append(float(Element(atom_list[j][0]).common_oxidation_states[k]))
                 valences.append(np.array(valence))
         valences = np.array(valences)
-        mcmc_vectors = mcmc.metropolis_hastings(valences,boa_vectors[i],macro._ITERATION)
+        mcmc_vectors, flag = mcmc.metropolis_hastings(valences,boa_vectors[i],macro._ITERATION)
 
         generated_composition = ''
         for j in range(len(mcmc_vectors)):
@@ -68,11 +69,13 @@ def save(normalized_data, gen, dis, pred, rf):
                 generated_composition = generated_composition+atom_list[j]+"%.2f"%(mcmc_vectors[j])
 
         generated_compositions.append(generated_composition)
+        flags.append(flag)
 
     # save generated result
     fp = open('%s/%s'%(macro._FILEPATH,macro._SAVE_FILE),'w')
     for i in range(len(generated_compositions)):
-        fp.write('%s\n'%(generated_compositions[i][0]))
+        if flags[i] == 0:
+            fp.write('%s\n'%(generated_compositions[i][0]))
     fp.close()
 
     # save models
