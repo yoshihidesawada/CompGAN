@@ -17,7 +17,8 @@ Before executing this code, please make ./inputs/training.csv, ./outputs, and ./
 After finishing, models and generated compositions are saved in ./outputs. In ./tmp, atom list, normalization parameters, and training data with physic descriptors are saved.
 
 # Citation
- 
+Yoshihide Sawada, Koji Morikawa, Mikiya Fujii, "Study of Deep Generative Models for Inorganic Chemical Compositions", 
+
 # Copyright
 Copyright (c) 2019 Yoshihide Sawada
 Released under the MIT license
