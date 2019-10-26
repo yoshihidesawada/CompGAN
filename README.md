@@ -10,7 +10,7 @@ Sample code of CondGAN for Inorganic Chemical Compositions
 - pymatgen 2018.4.6
 
 # Usage
-Before executing this code, please make ./inputs/training.csv. Then, please execute following command.
+Before executing this code, please make ./inputs/training.csv, ./outputs, and ./tmp. Then, please execute following command.
 
 `python main.py`
 
