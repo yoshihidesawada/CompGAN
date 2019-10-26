@@ -41,7 +41,7 @@ def save(normalized_data, gen, dis, pred, rf):
     for i in range(len(noise)):
         boa_vector = renormalized_fake[i,:len(atom_list)]
         for j in range(len(boa_vector)):
-            if abs(boa_vector[j]) < macro._TH:
+            if boa_vector[j] < macro._TH:
                 boa_vector[j] = 0.0
         if np.sum(boa_vector) != 0.0:
             boa_vector = boa_vector/np.sum(boa_vector)
@@ -54,7 +54,7 @@ def save(normalized_data, gen, dis, pred, rf):
 
         valences = []
         for j in range(len(boa_vectors[0])):
-            if np.abs(boa_vectors[i][j]) > 1.0e-6:
+            if boa_vectors[i][j] > 1.0e-6:
                 valence = []
                 for k in range(len(Element(atom_list[j][0]).common_oxidation_states)):
                     valence.append(float(Element(atom_list[j][0]).common_oxidation_states[k]))
@@ -64,7 +64,7 @@ def save(normalized_data, gen, dis, pred, rf):
 
         generated_composition = ''
         for j in range(len(mcmc_vectors)):
-            if np.abs(mcmc_vectors[j]) > 0.0:
+            if mcmc_vectors[j] > 1.0e-6:
                 generated_composition = generated_composition+atom_list[j]+"%.2f"%(mcmc_vectors[j])
 
         generated_compositions.append(generated_composition)
