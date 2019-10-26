@@ -8,7 +8,7 @@ import macro
 def metropolis_hastings(valences,chemical_formula,iteration):
 
 	# normalize and rounding
-	mean_vect = chemical_formula[chemical_formula>0.0]
+	mean_vect = chemical_formula[chemical_formula>1.0e-6]
 	mean_sum = np.sum(mean_vect)
 	mean_vect = mean_vect/mean_sum
 	mean_vect = np.round(mean_vect,decimals=macro._ROUND)
