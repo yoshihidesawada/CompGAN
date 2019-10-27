@@ -58,7 +58,7 @@ def metropolis_hastings(valences,chemical_formula,iteration):
         # if balance, return
         for i in range(len(y_now)):
             if abs(y_now[i]) < 1.0e-6:
-                return mean_vect
+                return mean_vect, 0
 
         x_star = np.random.multivariate_normal(mean_vect,cov,macro._SAMPLING)
         x_star = x_star.clip(min=1.0e-6)
