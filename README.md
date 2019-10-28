@@ -18,6 +18,7 @@ After finishing, models and generated compositions are saved in ./outputs. In ./
 
 # Citation
 Yoshihide Sawada, Koji Morikawa, Mikiya Fujii, "Study of Deep Generative Models for Inorganic Chemical Compositions", 
+https://arxiv.org/abs/1910.11499
 
 # Copyright
 Copyright (c) 2019 Yoshihide Sawada
